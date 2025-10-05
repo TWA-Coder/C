@@ -44,6 +44,7 @@ return -1;
 *showMenu - displays the menu for the User in stdout & calls appropriete function
 *@user: pointer to designated User
 */
+
 void show_menu(User *user)
 {
 int choice;
@@ -89,6 +90,7 @@ void check_balance(User *user)
 {
 printf("Your current balance is: $%.2f\n", user->balance);
 }
+
 /**
 *deposit - add amount to the user a/c and log the transaction
 *@user -designated user
@@ -114,6 +116,7 @@ add_transaction(user, log);
 
 printf("Deposit successful. New balance: $%.2f\n", user->balance);
 }
+
 /**
 *withdraw - removes amount to the user a/c and log the transaction
 *@user -designated user
@@ -144,6 +147,7 @@ add_transaction(user, log);
 
 printf("Withdrawal successful. New balance: $%.2f\n", user->balance);
 }
+
 /**
 *view_transactions - list user logs in stdout
 *@user -designated user
@@ -162,6 +166,7 @@ if (user->transaction_count == 0) {
     }
 }
 }
+
 /**
 *add_transaction - add to user log history
 *@user: designated user
@@ -175,4 +180,3 @@ strncpy(user->transactions[index], message, MAX_LOG_LEN - 1);
 user->transactions[index][MAX_LOG_LEN - 1] = '\0';
 user->transaction_count++;
 }
-
