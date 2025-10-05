@@ -17,12 +17,12 @@ typedef struct {
 
 // Core Functions
 int login(User users[], int user_count);
-void showMenu(User *user);
-void checkBalance(User *user);
+void show_menu(User *user);
+void check_balance(User *user);
 void deposit(User *user);
 void withdraw(User *user);
-void viewTransactions(User *user);
-void addTransaction(User *user, const char *message);
+void view_transactions(User *user);
+void add_transaction(User *user, const char *message);
 
 
 #endif
